@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html {
+    background: #000000;
+    min-height: 100vh;
+}
+
 :root {
     --primary-color: #007AFF;
     --secondary-color: #5856D6;
@@ -528,13 +533,25 @@ body::before {
 }
 
 @media (max-width: 768px) {
+    body {
+        background: var(--background) !important;
+        background: linear-gradient(135deg, #000000 0%, #001f4d 30%, #003366 70%, #000d1a 100%) !important;
+        min-height: 100vh !important;
+    }
+    
+    html {
+        background: #000000 !important;
+    }
+    
     .container {
         padding: 0 15px;
+        background: transparent !important;
     }
     
     .hero {
         min-height: 70vh;
         padding: 20px 0;
+        background: transparent !important;
     }
     
     .hero-title {
@@ -574,6 +591,16 @@ body::before {
 }
 
 @media (max-width: 480px) {
+    body {
+        background: var(--background) !important;
+        background: linear-gradient(135deg, #000000 0%, #001f4d 30%, #003366 70%, #000d1a 100%) !important;
+        min-height: 100vh !important;
+    }
+    
+    html {
+        background: #000000 !important;
+    }
+    
     .hero-title {
         font-size: 2rem;
     }
